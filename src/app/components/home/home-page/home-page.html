@@ -1,69 +1,119 @@
-<div class="min-h-screen bg-bg text-text font-sans p-10 space-y-8">
-  <!-- Header -->
-  <div>
-    <h1 class="text-3xl font-bold text-primary mb-2">🎨 Paleta de Colores — MicroCRM</h1>
-    <p class="text-text-muted">Prueba visual de la configuración Tailwind personalizada</p>
-  </div>
 
-  <!-- Colores Base -->
-  <section>
-    <h2 class="text-xl font-semibold mb-4 text-primary">🌐 Base</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="p-4 bg-bg border border-border rounded-xl shadow-soft">bg-bg</div>
-      <div class="p-4 bg-surface border border-border rounded-xl shadow-soft">bg-surface</div>
-      <div class="p-4 bg-border text-white border border-border rounded-xl">border</div>
-      <div class="p-4 bg-text text-white rounded-xl">text</div>
-      <div class="p-4 bg-text-muted text-white rounded-xl">text-muted</div>
+<body class="bg-base text-text font-sans">
+
+  <!-- 🔹 NAVBAR -->
+  <nav class="bg-surface shadow-soft fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-primary font-bold text-2xl tracking-tight">Zenda</div>
+      <ul class="hidden md:flex gap-6 text-text-secondary">
+        <li><a href="#features" class="hover:text-primary transition">Características</a></li>
+        <li><a href="#clientes" class="hover:text-primary transition">Clientes</a></li>
+        <li><a href="#negocios" class="hover:text-primary transition">Negocios</a></li>
+        <li><a href="#contacto" class="hover:text-primary transition">Contacto</a></li>
+      </ul>
+      <div class="flex gap-3">
+        <a href="/login" class="text-primary font-medium hover:underline">Iniciar sesión</a>
+        <a href="/register" class="bg-primary text-white px-4 py-2 rounded-xl shadow-soft hover:bg-primary-hover transition">Crear cuenta</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 HERO -->
+  <section class="pt-28 pb-20 bg-gradient-to-b from-base to-surface text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl md:text-6xl font-bold text-text mb-4">
+        Tu agenda inteligente para <span class="text-primary">negocios y clientes</span>
+      </h1>
+      <p class="text-text-secondary text-lg md:text-xl mb-8">
+        Gestiona tus reservas, optimiza tu tiempo y ofrece una experiencia fluida a tus clientes.  
+        Todo en un solo lugar.
+      </p>
+      <a href="/register" class="bg-primary text-white px-8 py-3 rounded-2xl text-lg shadow-elevated hover:bg-primary-hover transition">
+        Empieza gratis
+      </a>
     </div>
   </section>
 
-  <!-- Colores Primarios -->
-  <section>
-    <h2 class="text-xl font-semibold mb-4 text-primary">💙 Primarios</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="p-4 bg-primary text-white rounded-xl shadow-soft">primary</div>
-      <div class="p-4 bg-primary-dark text-white rounded-xl shadow-soft">primary-dark</div>
-      <div class="p-4 bg-primary-light text-text rounded-xl shadow-soft">primary-light</div>
+  <!-- 🔹 SECCIÓN FUNCIONALIDADES -->
+  <section id="features" class="py-20 bg-surface">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">¿Qué puedes hacer con Zenda?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="p-8 bg-base rounded-2xl shadow-soft hover:shadow-elevated transition">
+          <h3 class="text-xl font-semibold text-primary mb-3">📅 Reservas inteligentes</h3>
+          <p class="text-text-secondary">
+            Gestiona tus citas y disponibilidad de forma automática. Zenda se encarga de evitar solapamientos y confirmar cada reserva.
+          </p>
+        </div>
+
+        <div class="p-8 bg-base rounded-2xl shadow-soft hover:shadow-elevated transition">
+          <h3 class="text-xl font-semibold text-primary mb-3">👥 Clientes conectados</h3>
+          <p class="text-text-secondary">
+            Tus clientes pueden reservar sin registrarse o desde su perfil, recibir recordatorios y cancelar citas fácilmente.
+          </p>
+        </div>
+
+        <div class="p-8 bg-base rounded-2xl shadow-soft hover:shadow-elevated transition">
+          <h3 class="text-xl font-semibold text-primary mb-3">📊 Panel de control</h3>
+          <p class="text-text-secondary">
+            Accede a estadísticas de ocupación, aforo, servicios más solicitados y valoraciones. Control total de tu negocio.
+          </p>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- Estados del Sistema -->
-  <section>
-    <h2 class="text-xl font-semibold mb-4 text-primary">⚙️ Estados</h2>
-    <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
-      <div class="p-4 bg-success text-white rounded-xl shadow-soft">success</div>
-      <div class="p-4 bg-success-light text-text rounded-xl shadow-soft">success-light</div>
-      <div class="p-4 bg-warning text-white rounded-xl shadow-soft">warning</div>
-      <div class="p-4 bg-warning-light text-text rounded-xl shadow-soft">warning-light</div>
-      <div class="p-4 bg-error text-white rounded-xl shadow-soft">error</div>
-      <div class="p-4 bg-error-light text-text rounded-xl shadow-soft">error-light</div>
+  <!-- 🔹 SECCIÓN CLIENTES -->
+  <section id="clientes" class="py-20 bg-base">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">Pensado para tus clientes</h2>
+      <p class="text-text-secondary mb-12 max-w-2xl mx-auto">
+        Reservar nunca fue tan fácil. Tus clientes podrán gestionar sus citas desde cualquier dispositivo sin llamadas ni esperas.
+      </p>
+      <img src="https://cdn.dribbble.com/users/1162077/screenshots/15420970/media/7348ff8161e4f1f2de1f41ceaa9a519d.png?compress=1&resize=1200x900&vertical=top" 
+           alt="Clientes felices" 
+           class="rounded-2xl shadow-elevated mx-auto max-w-3xl">
     </div>
   </section>
 
-  <!-- Información / Acentos -->
-  <section>
-    <h2 class="text-xl font-semibold mb-4 text-primary">💬 Información / Acentos</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="p-4 bg-info text-white rounded-xl shadow-soft">info</div>
-      <div class="p-4 bg-info-light text-text rounded-xl shadow-soft">info-light</div>
-      <div class="p-4 bg-accent text-white rounded-xl shadow-soft">accent</div>
-      <div class="p-4 bg-accent-light text-text rounded-xl shadow-soft">accent-light</div>
+  <!-- 🔹 SECCIÓN NEGOCIOS -->
+  <section id="negocios" class="py-20 bg-surface">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">Hecho para propietarios</h2>
+      <p class="text-text-secondary mb-12 max-w-2xl mx-auto">
+        Desde peluquerías hasta clínicas, Zenda se adapta a tu negocio. Simplifica la gestión diaria y dedica tu tiempo a lo importante.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-base rounded-xl shadow-soft">
+          <h3 class="text-lg font-semibold text-primary mb-2">Configuración rápida</h3>
+          <p class="text-text-secondary">Añade tus servicios, horarios y personal en minutos.</p>
+        </div>
+        <div class="p-6 bg-base rounded-xl shadow-soft">
+          <h3 class="text-lg font-semibold text-primary mb-2">Confirmaciones automáticas</h3>
+          <p class="text-text-secondary">Ahorra tiempo con correos y notificaciones automáticas.</p>
+        </div>
+        <div class="p-6 bg-base rounded-xl shadow-soft">
+          <h3 class="text-lg font-semibold text-primary mb-2">Control de aforo</h3>
+          <p class="text-text-secondary">Evita sobrecargas y gestiona el flujo de clientes fácilmente.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Tipografía y ejemplo general -->
-  <section>
-    <h2 class="text-xl font-semibold mb-4 text-primary">🧠 Tipografía y ejemplo UI</h2>
-    <div class="bg-surface rounded-2xl p-6 shadow-elevated border border-border max-w-lg">
-      <h3 class="text-2xl font-bold mb-2 text-text">Panel principal</h3>
-      <p class="text-text-muted mb-4">Esta es una vista de ejemplo usando la paleta personalizada.</p>
-
-      <button class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-xl font-medium mr-2">
-        Confirmar
-      </button>
-      <button class="bg-error hover:bg-error-light text-white px-4 py-2 rounded-xl font-medium">
-        Cancelar
-      </button>
-    </div>
+  <!-- 🔹 CTA FINAL -->
+  <section class="py-24 bg-primary text-white text-center">
+    <h2 class="text-4xl font-bold mb-4">Empieza hoy con Zenda</h2>
+    <p class="text-lg mb-8 opacity-90">Crea tu cuenta gratis y transforma la forma en que gestionas tu tiempo y tus reservas.</p>
+    <a href="/register" class="bg-white text-primary font-semibold px-8 py-3 rounded-2xl shadow-soft hover:bg-base transition">
+      Crear cuenta gratuita
+    </a>
   </section>
-</div>
+
+  <!-- 🔹 FOOTER -->
+  <footer class="bg-surface border-t border-gray-200 py-8 text-center text-sm text-text-secondary">
+    © 2025 Zenda — Tu agenda inteligente · <a href="#contacto" class="hover:text-primary">Contacto</a>
+  </footer>
+
+</body>
