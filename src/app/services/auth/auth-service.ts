@@ -29,4 +29,8 @@ export class AuthService {
   isAuthenticated(): boolean {
     return !!localStorage.getItem('microCRMToken');
   }
+
+  getToken():string{
+    return localStorage.getItem("microCRMToken");
+  }
 }
