@@ -1,20 +1,33 @@
-
-<body class="bg-base text-text font-sans">
+<!-- home-page.component.html -->
+<div class="bg-base text-text font-sans min-h-screen flex flex-col">
 
   <!-- 🔹 NAVBAR -->
   <nav class="bg-surface shadow-soft fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="text-primary font-bold text-2xl tracking-tight">Zenda</div>
+
       <ul class="hidden md:flex gap-6 text-text-secondary">
         <li><a href="#features" class="hover:text-primary transition">Características</a></li>
         <li><a href="#clientes" class="hover:text-primary transition">Clientes</a></li>
         <li><a href="#negocios" class="hover:text-primary transition">Negocios</a></li>
         <li><a href="#contacto" class="hover:text-primary transition">Contacto</a></li>
       </ul>
-      <div class="flex gap-3">
-        <a href="/login" class="text-primary font-medium hover:underline">Iniciar sesión</a>
-        <a href="/register" class="bg-primary text-white px-4 py-2 rounded-xl shadow-soft hover:bg-primary-hover transition">Crear cuenta</a>
-      </div>
+
+     <div class="flex items-center gap-4">
+        <button 
+            (click)="goToLogin()" 
+            class="text-primary font-medium hover:underline leading-none"
+        >
+            Iniciar sesión
+        </button>
+
+        <button 
+            (click)="goToRegister()" 
+            class="bg-primary text-white px-4 py-2 rounded-xl shadow-soft hover:bg-primary-hover transition leading-none"
+        >
+            Crear cuenta
+        </button>
+    </div>
     </div>
   </nav>
 
@@ -28,7 +41,7 @@
         Gestiona tus reservas, optimiza tu tiempo y ofrece una experiencia fluida a tus clientes.  
         Todo en un solo lugar.
       </p>
-      <a href="/register" class="bg-primary text-white px-8 py-3 rounded-2xl text-lg shadow-elevated hover:bg-primary-hover transition">
+      <a (click)="this.goToRegister()" class="cursor-pointer bg-primary text-white px-8 py-3 rounded-2xl text-lg shadow-elevated hover:bg-primary-hover transition">
         Empieza gratis
       </a>
     </div>
@@ -39,11 +52,10 @@
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-12">¿Qué puedes hacer con Zenda?</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        
         <div class="p-8 bg-base rounded-2xl shadow-soft hover:shadow-elevated transition">
           <h3 class="text-xl font-semibold text-primary mb-3">📅 Reservas inteligentes</h3>
           <p class="text-text-secondary">
-            Gestiona tus citas y disponibilidad de forma automática. Zenda se encarga de evitar solapamientos y confirmar cada reserva.
+            Gestiona tus citas y disponibilidad de forma automática. Zenda evita solapamientos y confirma cada reserva.
           </p>
         </div>
 
@@ -57,17 +69,16 @@
         <div class="p-8 bg-base rounded-2xl shadow-soft hover:shadow-elevated transition">
           <h3 class="text-xl font-semibold text-primary mb-3">📊 Panel de control</h3>
           <p class="text-text-secondary">
-            Accede a estadísticas de ocupación, aforo, servicios más solicitados y valoraciones. Control total de tu negocio.
+            Accede a estadísticas de ocupación, servicios más solicitados y valoraciones. Control total de tu negocio.
           </p>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- 🔹 SECCIÓN CLIENTES -->
-  <section id="clientes" class="py-20 bg-base">
-    <div class="max-w-6xl mx-auto px-6 text-center">
+  <section id="clientes" class="py-20 bg-base text-center">
+    <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-8">Pensado para tus clientes</h2>
       <p class="text-text-secondary mb-12 max-w-2xl mx-auto">
         Reservar nunca fue tan fácil. Tus clientes podrán gestionar sus citas desde cualquier dispositivo sin llamadas ni esperas.
@@ -79,8 +90,8 @@
   </section>
 
   <!-- 🔹 SECCIÓN NEGOCIOS -->
-  <section id="negocios" class="py-20 bg-surface">
-    <div class="max-w-6xl mx-auto px-6 text-center">
+  <section id="negocios" class="py-20 bg-surface text-center">
+    <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-8">Hecho para propietarios</h2>
       <p class="text-text-secondary mb-12 max-w-2xl mx-auto">
         Desde peluquerías hasta clínicas, Zenda se adapta a tu negocio. Simplifica la gestión diaria y dedica tu tiempo a lo importante.
@@ -105,15 +116,16 @@
   <!-- 🔹 CTA FINAL -->
   <section class="py-24 bg-primary text-white text-center">
     <h2 class="text-4xl font-bold mb-4">Empieza hoy con Zenda</h2>
-    <p class="text-lg mb-8 opacity-90">Crea tu cuenta gratis y transforma la forma en que gestionas tu tiempo y tus reservas.</p>
-    <a href="/register" class="bg-white text-primary font-semibold px-8 py-3 rounded-2xl shadow-soft hover:bg-base transition">
+    <p class="text-lg mb-8 opacity-90">Crea tu cuenta gratis y transforma la forma en que gestionas tus reservas.</p>
+    <a routerLink="/register" class="bg-white text-primary font-semibold px-8 py-3 rounded-2xl shadow-soft hover:bg-base transition">
       Crear cuenta gratuita
     </a>
   </section>
 
   <!-- 🔹 FOOTER -->
   <footer class="bg-surface border-t border-gray-200 py-8 text-center text-sm text-text-secondary">
-    © 2025 Zenda — Tu agenda inteligente · <a href="#contacto" class="hover:text-primary">Contacto</a>
+    © 2025 Zenda — Tu agenda inteligente · 
+    <a href="#contacto" class="hover:text-primary">Contacto</a>
   </footer>
 
-</body>
+</div>
