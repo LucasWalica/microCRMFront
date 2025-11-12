@@ -17,16 +17,16 @@ export class AuthService {
   login(credentials: { email: string; password: string }): Observable<{ token: string }> {
     return this.http.post<{ token: string }>('/api/login', credentials).pipe(
       tap(response => {
-        localStorage.setItem('authToken', response.token);
+        localStorage.setItem('microCRMToken', response.token);
       })
     );
   }
 
   logout(): void {
-    localStorage.removeItem('authToken');
+    localStorage.removeItem('microCRMToken');
   }
 
   isAuthenticated(): boolean {
-    return !!localStorage.getItem('authToken');
+    return !!localStorage.getItem('microCRMToken');
   }
 }
