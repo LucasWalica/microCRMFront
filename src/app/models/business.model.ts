@@ -17,7 +17,10 @@ export interface Business {
   userId: number;
   name: string;
   type?: string;
-  coordinates?: string;       // Por ejemplo: "40.4168,-3.7038"
+  coordinates: {
+   lat: number;
+   lng: number;
+}       
   logo?: string;              // URL del logo
   images?: string[];          // URLs de galería de imágenes
   description?: string;

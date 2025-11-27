@@ -30,7 +30,10 @@ export class AuthService {
     return !!localStorage.getItem('microCRMToken');
   }
 
-  getToken():string{
-    return localStorage.getItem("microCRMToken");
+  getToken():string|null{
+    if( this.isAuthenticated()){
+      return localStorage.getItem("microCRMToken");
+    }
+    return null;
   }
 }
